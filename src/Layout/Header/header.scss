@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+header{
+  background: $backgroundDark;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  position: fixed;
+  padding: 10px;
+  border-bottom: solid $light 1px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      width: 30px;
+      b{
+        margin: 0 10px;
+        font-size: 20px;
+        color: white;
+      }
+      img{
+
+        height: 60px;
+      }
+    }
+    .navigate{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 30%;
+      a{
+        font-size: 20px;
+        color: $light;
+        position: relative;
+        &.active{
+          color: white;
+
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          height: 2px;
+          width: 0;
+          background: currentColor;
+          transition: width .2s ease-in-out;
+        }
+        &:hover:before{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

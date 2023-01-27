@@ -3,7 +3,7 @@ import './about-block.scss'
 
 const AboutBlock = () => {
     return (
-        <section>
+        <div className="about">
             <div className="container">
                 <h1>О нас</h1>
                 <p>
@@ -52,7 +52,7 @@ const AboutBlock = () => {
                     tempore! Culpa deleniti dolorum eius itaque ut!
                 </p>
             </div>
-        </section>
+        </div>
     )
 }
 

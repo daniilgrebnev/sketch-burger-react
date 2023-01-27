@@ -1,8 +1,11 @@
 @import '../../../styles/variables';
 
-section{
+.about{
   height: 60vh;
+  display: block;
+
   h1{
     text-align: center;
+    display: block;
   }
 }

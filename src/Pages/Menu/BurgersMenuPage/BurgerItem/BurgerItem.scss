@@ -1,15 +1,15 @@
 @import '../../../../styles/variables';
 
 .burger-item{
-  border: 2px solid $light;
+
   margin: 50px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: none;
+  box-shadow: 10px 10px 60px #000000;
   transition: all .2s ease-in-out;
   cursor: pointer;
   &:hover{
-    box-shadow: 10px 10px 30px #000000;
+    box-shadow: 10px 10px 20px #000000;
 
   }
   .img{

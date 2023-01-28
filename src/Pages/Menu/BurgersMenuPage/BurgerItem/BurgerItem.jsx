@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './BurgerItem.scss'
 import burgers from '../../../../assets/logo.svg'
+import { Link } from 'react-router-dom'
+import BurgerPage from '../BurgerPage/BurgerPage.jsx'
 
 const BurgerItem = (burger) => {
     let [counter, setCounter] = useState(1)
@@ -14,9 +16,11 @@ const BurgerItem = (burger) => {
     }
     return (
         <div className="burger-item">
-            <div className="img">
-                <img src={burgers} alt="" />
-            </div>
+            <Link to={burger.id}>
+                <div className="img">
+                    <img src={burgers} alt="" />
+                </div>
+            </Link>
             <div className="content">
                 <p>{burger.title}</p>
                 <div className="counter">

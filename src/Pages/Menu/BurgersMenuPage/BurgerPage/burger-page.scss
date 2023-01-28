@@ -1,0 +1,112 @@
+@import '../../../../styles/variables';
+
+.burger-page{
+  margin-top: 200px;
+  .container{
+    display: grid;
+    grid-template-columns: 35% 55%;
+    justify-content: space-between;
+    align-items: flex-start;
+    .slider{
+      padding: 20px;
+      margin: 0 20px;
+      box-shadow: 10px 10px 40px #000000;
+      border-radius: 20px;
+      max-height: 370px;
+      img{
+        width: 100%;
+
+      }
+    }
+    .content{
+      position: relative;
+      margin: 0  auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 10px 10px 40px #000000;
+
+      h2{
+        text-align: center;
+        font-size: 40px;
+      }
+      p{
+        margin: 50px 0;
+      }
+      .count-with-button{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        .counter{
+          display: grid;
+          grid-template-columns: 20% 60% 20%;
+          align-items: center;
+          width: 100px;
+          margin: 30px auto 20px auto;
+          font-weight: bold;
+          border-radius: 20px;
+          background-color: rgba(0, 0, 0, 0.27);
+          padding: 3px 20px;
+          user-select: none;
+          position: absolute;
+          left: 20px;
+          height: 40px;
+          .minus{
+            font-size: 20px;
+            cursor: pointer;
+            color: rgb(203, 48, 48);
+          }
+          .count{
+            font-size: 25px;
+            text-align: center;
+          }
+          .plus{
+            font-size: 20px;
+            cursor: pointer;
+            color: #2a942a;
+          }}
+        button{
+          width: 50%;
+          margin: 50px auto;
+          padding: 0 20px;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 50% 35%;
+          justify-content: space-between;
+          align-items: center;
+          outline: none;
+          border: none;
+          background-color: rgba(0, 0, 0, 0.27);
+          color:$light;
+          position: absolute;
+          right: 20px;
+          border-radius: 20px;
+          overflow: hidden;
+          .cost{
+            font-size: 20px;
+
+            span{
+              font-weight: bold;
+
+            }
+
+          }
+          .toCart{
+            border-left: 1px solid $light;
+            cursor: pointer;
+            position: absolute;
+            height: 100%;
+            right: 0;
+            padding:0 20px;
+            align-items: center;
+            display: flex;
+
+            &:hover{
+              background-color: rgba(0, 0, 0, 0.55);
+            }
+          }
+      }
+
+      }
+    }
+  }
+}

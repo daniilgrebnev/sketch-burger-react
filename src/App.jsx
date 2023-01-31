@@ -8,6 +8,7 @@ import BurgersMenuPage from './Pages/Menu/BurgersMenuPage/BurgersMenuPage.jsx'
 import BurgerPage from './Pages/Menu/BurgersMenuPage/BurgerPage/BurgerPage.jsx'
 import { Provider } from 'react-redux'
 import { store } from './redux/index.js'
+import Cart from './Pages/Cart/Cart.jsx'
 
 const App = () => {
     return (
@@ -26,6 +27,7 @@ const App = () => {
                             path="menu/burger/:BurgerId"
                             element={<BurgerPage />}
                         />
+                        <Route path="cart" element={<Cart />} />
                     </Routes>
                 </Layout>
             </div>

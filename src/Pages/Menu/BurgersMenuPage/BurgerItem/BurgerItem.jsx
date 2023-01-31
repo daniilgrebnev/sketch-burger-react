@@ -2,18 +2,25 @@ import React, { useState } from 'react'
 import './BurgerItem.scss'
 import burgers from '../../../../assets/logo.svg'
 import { Link } from 'react-router-dom'
-import BurgerPage from '../BurgerPage/BurgerPage.jsx'
+import { useDispatch, useSelector } from 'react-redux'
+import { setItemInCart } from '../../../../redux/cart/reducer.js'
 
 const BurgerItem = (burger) => {
     let [counter, setCounter] = useState(1)
 
     let sum = counter * burger.cost
 
+    const dispatch = useDispatch()
+    const items = useSelector((state) => state.cart.itemsInCart)
+    const handleClick = () => {
+        dispatch(setItemInCart(burger))
+    }
     const minusFunc = () => {
         if (counter > 1) {
             setCounter(counter - 1)
         }
     }
+
     return (
         <div className="burger-item">
             <Link to={burger.id}>
@@ -23,23 +30,14 @@ const BurgerItem = (burger) => {
             </Link>
             <div className="content">
                 <p>{burger.title}</p>
-                <div className="counter">
-                    <div className="minus" onClick={minusFunc}>
-                        -
-                    </div>
-                    <div className="count">{counter}</div>
-                    <div
-                        className="plus"
-                        onClick={() => setCounter(counter + 1)}
-                    >
-                        +
-                    </div>
-                </div>
+
                 <button>
                     <span className="cost">
-                        <span>{sum}</span> руб.
+                        <span>{burger.cost}</span> руб.
                     </span>
-                    <span className="add">В корзину</span>
+                    <span className="add" onClick={handleClick}>
+                        В корзину
+                    </span>
                 </button>
             </div>
         </div>

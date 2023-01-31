@@ -9,7 +9,7 @@ header{
   z-index: 40;
   position: fixed;
   padding: 10px;
-  border-bottom: solid $light 1px;
+  
   .container{
     display: flex;
     justify-content: space-between;
@@ -57,5 +57,67 @@ header{
         }
       }
     }
+    .cart{
+      width: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      cursor: pointer;
+      p{
+        font-size: 20px;
+      }
+      img{
+        width: 40px;
+      }
+      .circle{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background: #ea5e5e;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+    }
+    .cart-wrapper{
+      position: absolute;
+      background-color: transparent;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: end;
+      transition: all .2s ease;
+      .back{
+        width: 70%;
+        text-align: right;
+
+        p{
+          font-size: 30px;
+          margin: 25px;
+          color: #ea5e5e;
+          display: none;
+          transition: .5s;
+          cursor: pointer;
+          font-weight: bold;
+          &.active{
+            display: block;
+          }
+        }
+      }
+
+      &.active{
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
   }
 }

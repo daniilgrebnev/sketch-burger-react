@@ -4,6 +4,7 @@ import { db } from '../../../firebase/firebase.js'
 import { collection, onSnapshot } from 'firebase/firestore'
 import BurgerItem from './BurgerItem/BurgerItem.jsx'
 import roll from '../../../assets/rolly.svg'
+import burgers from '../../../assets/logo.svg'
 
 const BurgersMenuPage = () => {
     const [burgers, setBurgers] = useState([])
@@ -17,6 +18,7 @@ const BurgersMenuPage = () => {
                 setBurgers(burgersArray)
             })
         })
+
         return () => unsubscribe
     }, [])
 

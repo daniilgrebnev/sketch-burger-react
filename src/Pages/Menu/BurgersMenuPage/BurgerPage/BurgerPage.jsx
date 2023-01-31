@@ -11,6 +11,7 @@ const BurgerPage = () => {
     const { BurgerId } = useParams()
     let [burgers, setBurgers] = useState([])
     let [counter, setCounter] = useState(1)
+    let [cost, setCost] = useState(burgers.cost)
 
     useEffect(() => {
         const q = collection(db, 'burgers')
@@ -29,19 +30,12 @@ const BurgerPage = () => {
             setCounter(counter - 1)
         }
     }
-    let sum = counter * burgers.cost
 
     const dispatch = useDispatch()
     const items = useSelector((state) => state.cart.itemsInCart)
 
-    const isItemInCart = items.some((item) => item.id === burgers.id)
-
     const handleClick = () => {
-        if (isItemInCart) {
-            dispatch(removeItemInCart(burgers.id))
-        } else {
-            dispatch(setItemInCart(burgers))
-        }
+        dispatch(setItemInCart(burgers))
     }
     return (
         <div className="burger-page">
@@ -77,22 +71,9 @@ const BurgerPage = () => {
                         mollitia nihil praesentium, quaerat rem unde velit!
                     </p>
                     <div className="count-with-button">
-                        <div className="counter">
-                            <div className="minus" onClick={minusFunc}>
-                                -
-                            </div>
-                            <div className="count">{counter}</div>
-                            <div
-                                className="plus"
-                                onClick={() => setCounter(counter + 1)}
-                            >
-                                +
-                            </div>
-                        </div>
-
                         <button>
                             <span className="cost">
-                                <span>{sum}</span> руб.
+                                <span>{burgers.cost}</span> руб.
                             </span>
                             <span className="toCart" onClick={handleClick}>
                                 В корзину

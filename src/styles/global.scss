@@ -1,0 +1,24 @@
+@import url('normalize.css');
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,700;1,600&display=swap');
+
+* {
+    font-family: $font;
+}
+body {
+    font-family: $font;
+    background: $dark;
+    color: $light;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+    }
+}
+a {
+    color: white;
+    text-decoration: none;
+}

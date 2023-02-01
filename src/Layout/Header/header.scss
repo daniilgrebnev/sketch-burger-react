@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+
+header{
+  background: $backgroundDark;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  position: fixed;
+  padding: 10px;
+  
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      width: 30px;
+      b{
+        margin: 0 10px;
+        font-size: 20px;
+        color: white;
+      }
+      img{
+
+        height: 60px;
+      }
+    }
+    .navigate{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 30%;
+      a{
+        font-size: 20px;
+        color: $light;
+        position: relative;
+        &.active{
+          color: white;
+
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          height: 2px;
+          width: 0;
+          background: currentColor;
+          transition: width .2s ease-in-out;
+        }
+        &:hover:before{
+          width: 100%;
+        }
+      }
+    }
+    .cart{
+      width: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      cursor: pointer;
+      p{
+        font-size: 20px;
+      }
+      img{
+        width: 40px;
+      }
+      .circle{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background: #ea5e5e;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+    }
+    .cart-wrapper{
+      position: absolute;
+      background-color: transparent;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: end;
+      transition: all .2s ease;
+      .back{
+        width: 70%;
+        text-align: right;
+
+        p{
+          font-size: 30px;
+          margin: 25px;
+          color: #ea5e5e;
+          display: none;
+          transition: .5s;
+          cursor: pointer;
+          font-weight: bold;
+          &.active{
+            display: block;
+          }
+        }
+      }
+
+      &.active{
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+  }
+}

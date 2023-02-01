@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.home-main-block{
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 100vh;
+  overflow: hidden;
+  .container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .text{
+      text-align: center;
+      margin-bottom: 50px;
+      background: $backgroundDark;
+      width: 700px;
+      border-radius: 20px;
+      h1{
+        font-size: 70px;
+        color: white;
+      }
+      p{
+
+      }
+    }
+  }
+}

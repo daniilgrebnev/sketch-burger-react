@@ -1,0 +1,122 @@
+@import '../../styles/variables';
+
+.cart-content {
+    color: $light;
+    text-align: center;
+    position: relative;
+    margin-top: 150px;
+    .cards {
+    }
+    h1 {
+        margin: 50px auto 100px auto;
+        font-size: 40px;
+        text-align: center;
+    }
+    .cart-product-card {
+        margin: 0 auto;
+        padding: 8px 0;
+        display: grid;
+        grid-template-columns: 20% 10% 50% 15% 5%;
+        align-items: center;
+        width: 80%;
+        border-bottom: 1px solid #737272;
+        overflow: hidden;
+        position: relative;
+        .img {
+            width: 100px;
+            height: 100px;
+
+            padding: 5px;
+            margin: 0 auto;
+            img {
+            }
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            font-size: 20px;
+
+            .plus {
+                color: #2a942a;
+            }
+            .minus {
+                color: #ea5e5e;
+            }
+            b {
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .plus,
+            .minus {
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #484848;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 0 50px;
+            text-align: center;
+        }
+
+        .cost {
+            font-size: 18px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+        .remove {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+    p {
+        text-align: center;
+        min-width: 150px;
+        margin: 20px auto;
+        font-size: 20px;
+        position: fixed;
+        right: 20px;
+        top: 80%;
+        padding: 20px 50px;
+        background: #484848;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .checkout {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 20px;
+        position: fixed;
+        right: 20px;
+        top: 90%;
+        width: 150px;
+        padding: 20px 50px;
+        background: #484848;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}

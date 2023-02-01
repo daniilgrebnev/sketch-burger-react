@@ -4,10 +4,11 @@ import { Route, Routes } from 'react-router-dom'
 import About from './Pages/About/About.jsx'
 import Menu from './Pages/Menu/Menu.jsx'
 import Layout from './Layout/Layout.jsx'
-import BurgersMenuPage from './Pages/Menu/BurgersMenuPage/BurgersMenuPage.jsx'
-import BurgerPage from './Pages/Menu/BurgersMenuPage/BurgerPage/BurgerPage.jsx'
+import BurgersMenuPage from './Pages/Menu/Burgers/BurgersMenuPage.jsx'
+
 
 import Cart from './Pages/Cart/Cart.jsx'
+import DrinksMenuPage from "./Pages/Menu/Drinks/DrinksMenuPage";
 
 const App = () => {
     return (
@@ -18,10 +19,7 @@ const App = () => {
                     <Route path="about" element={<About />} />
                     <Route path="menu" element={<Menu />} />
                     <Route path="menu/burger" element={<BurgersMenuPage />} />
-                    <Route
-                        path="menu/burger/:BurgerId"
-                        element={<BurgerPage />}
-                    />
+                    <Route path="menu/drinks" element={<DrinksMenuPage />} />
                     <Route path="cart" element={<Cart />} />
                 </Routes>
             </Layout>

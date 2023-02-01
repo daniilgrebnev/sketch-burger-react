@@ -31,10 +31,12 @@ const ItemCart = (item) => {
         }
     }
 
+
     return (
         <div className="cart-product-card" key={item.id}>
-            <div className="img">
-                <img src={logo} alt="" />
+
+            <div className="img" >
+                <img src={item.img} alt={item.name} />
             </div>
 
             <div className="counter">

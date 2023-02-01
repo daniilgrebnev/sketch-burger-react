@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import './burger-menu-page.scss'
+import './drink-menu-page.scss'
 import { db } from '../../../firebase/firebase.js'
 import { collection, onSnapshot } from 'firebase/firestore'
-import BurgerItem from './BurgerItem/BurgerItem.jsx'
+import Item from '../Item/Item'
 import roll from '../../../assets/rolly.svg'
 import burgers from '../../../assets/logo.svg'
+import drinks from '../../../assets/MenuMain/drinks.svg'
 
-const BurgersMenuPage = () => {
+const DrinksMenuPage = () => {
     const [burgers, setBurgers] = useState([])
 
     useEffect(() => {
-        const q = collection(db, 'burgers')
+        const q = collection(db, 'drinks')
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             let burgersArray = []
             querySnapshot.forEach((doc) => {
@@ -25,7 +26,7 @@ const BurgersMenuPage = () => {
     return (
         <div className="burger-menu-page">
             <div className="container">
-                <h1>Бургеры</h1>
+                <h1>Напитки</h1>
                 <div className="burgers">
                     {burgers.length <= 0 ? (
                         <div className="roll">
@@ -33,7 +34,7 @@ const BurgersMenuPage = () => {
                         </div>
                     ) : (
                         burgers.map((burger) => (
-                            <BurgerItem key={burger.id} {...burger} />
+                            <Item key={burger.id} {...burger} background='#e3e359'/>
                         ))
                     )}
                 </div>
@@ -42,4 +43,4 @@ const BurgersMenuPage = () => {
     )
 }
 
-export default BurgersMenuPage
+export default DrinksMenuPage

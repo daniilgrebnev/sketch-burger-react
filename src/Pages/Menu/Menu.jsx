@@ -6,7 +6,7 @@ import sale from '../../assets/MenuMain/sale.svg'
 import dessert from '../../assets/MenuMain/dessert.svg'
 import sauce from '../../assets/MenuMain/souce.svg'
 import snacks from '../../assets/MenuMain/snacks.svg'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
     const [categories, setCategories] = useState([
@@ -14,7 +14,7 @@ const Menu = () => {
             id: 1,
             title: 'Напитки',
             img: drinks,
-            link: 'burger',
+            link: 'drinks',
         },
         {
             id: 2,
@@ -53,7 +53,7 @@ const Menu = () => {
             <div className="container">
                 <div className="categories">
                     {categories.map((category) => (
-                        <NavLink to={category.link}>
+                        <Link to={category.link}>
                             <div className="category" key={category.id}>
                                 <div className="category-img">
                                     <img src={category.img} alt="" />
@@ -62,7 +62,7 @@ const Menu = () => {
                                     <p>{category.title}</p>
                                 </div>
                             </div>
-                        </NavLink>
+                        </Link>
                     ))}
                 </div>
             </div>

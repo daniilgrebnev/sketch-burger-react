@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@import '../../../styles/variables';
 
 .burger-item{
 
@@ -30,7 +30,7 @@
   }
   .content{
     padding: 20px;
-    position: relative;
+
 
     p{
       font-size: 25px;
@@ -99,6 +99,20 @@
           background-color: #737272;
         }
       }
+    }
+  }
+  .item-card-popup{
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    background-color: $backgroundDark;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    cursor: auto;
+
+    &.active {
+      width: 25%;
     }
   }
 }

@@ -6,9 +6,9 @@ import Menu from './Pages/Menu/Menu.jsx'
 import Layout from './Layout/Layout.jsx'
 import BurgersMenuPage from './Pages/Menu/Burgers/BurgersMenuPage.jsx'
 
-
 import Cart from './Pages/Cart/Cart.jsx'
-import DrinksMenuPage from "./Pages/Menu/Drinks/DrinksMenuPage";
+import DrinksMenuPage from './Pages/Menu/Drinks/DrinksMenuPage'
+import ItemCard from './Pages/Menu/ItemCard/ItemCard'
 
 const App = () => {
     return (
@@ -20,6 +20,8 @@ const App = () => {
                     <Route path="menu" element={<Menu />} />
                     <Route path="menu/burger" element={<BurgersMenuPage />} />
                     <Route path="menu/drinks" element={<DrinksMenuPage />} />
+                    <Route path="menu/burger/:id" element={<ItemCard />} />
+                    <Route path="menu/drinks/:id" element={<ItemCard />} />
                     <Route path="cart" element={<Cart />} />
                 </Routes>
             </Layout>

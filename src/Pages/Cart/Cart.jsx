@@ -20,13 +20,10 @@ const Cart = () => {
                             <ItemCart {...item} key={item.id} />
                         ))
                     ) : (
-                        <div>Пока ничего нет</div>
+                        <div className="nobody">Пока ничего нет</div>
                     )}
                 </div>
                 <div className="checkout">Оплатить</div>
-                <p>
-                    Итого: <b>{price}</b> руб.
-                </p>
             </div>
         </div>
     )

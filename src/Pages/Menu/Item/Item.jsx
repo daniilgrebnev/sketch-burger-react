@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './item.scss'
 
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setItemInCart } from '../../../redux/cart/reducer.js'
 
 const Item = (burger) => {
@@ -45,10 +45,17 @@ const Item = (burger) => {
                     i
                 </div>
                 <div className={infoHover ? 'info-text active' : 'info-text'}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Aspernatur, sit nesciunt suscipit nulla delectus nisi
-                    ratione, quia earum fuga, quis fugiat. Error corrupti
-                    laudantium ex cumque distinctio, mollitia libero officiis?
+                    Твистер оригинальный — аппетитная и сочная еда в удобном
+                    формате. Можно есть на ходу, не боясь испачкаться. Главный
+                    ингредиент в составе Твистера оригинального — отборные
+                    куриные стрипсы в оригинальной панировке, приготовленные по
+                    секретному рецепту с добавлением 11 трав и специй,
+                    обжаренные до маняще хрустящей корочки. Стрипсы отлично
+                    сочетаются с сочными свежими овощами и фирменным соусом,
+                    закрученными в аппетитную пшеничную лепешку. Скорее
+                    попробуйте! Состав: Тортилья пшеничная; Томаты свежие; Салат
+                    Айсберг; Соус Майонезный; Стрипсы OR. На 100 граммов: К 232,
+                    Б 13, Ж 9, У 25
                 </div>
 
                 <button>

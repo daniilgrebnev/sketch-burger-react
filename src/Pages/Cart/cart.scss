@@ -5,10 +5,11 @@
     text-align: center;
     position: relative;
     margin-top: 150px;
+
     .cards {
+        width: 100%;
         display: grid;
         grid-template-columns: 33% 33% 33%;
-        margin: 0 auto;
     }
 
     h1 {
@@ -20,12 +21,14 @@
         margin: 20px auto;
         box-shadow: 10px 10px 30px #000000;
         border-radius: 15px;
-        height: 350px;
+        height: 230px;
         position: relative;
         align-items: center;
-        width: 80%;
+        width: 90%;
+
         padding: 20px;
-        border-bottom: 1px solid #737272;
+        border-bottom: 2px solid #737272;
+        border-right: 2px solid #737272;
         overflow: hidden;
         position: relative;
         .img {
@@ -77,10 +80,10 @@
         }
 
         .title {
-            font-size: 25px;
+            font-size: 20px;
             font-weight: bold;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 30px;
         }
 
         .cost {
@@ -131,5 +134,9 @@
         background: #484848;
         border-radius: 20px;
         cursor: pointer;
+    }
+    .nobody {
+        text-align: center;
+        width: 300%;
     }
 }

@@ -31,21 +31,19 @@ const ItemCart = (item) => {
         }
     }
 
-
     return (
         <div className="cart-product-card" key={item.id}>
-
-            <div className="img" >
+            <div className="img">
                 <img src={item.img} alt={item.name} />
             </div>
 
             <div className="counter">
                 <div className="minus" onClick={() => minusCount(item.id)}>
-                    <Minus fill="#ea5e5e" width="15px" />
+                    <Minus fill="#ea5e5e" width="12px" />
                 </div>
                 <b>{count}</b>
                 <div className="plus" onClick={() => plusCounter()}>
-                    <Plus fill="#2a942a" width="15px" />
+                    <Plus fill="#2a942a" width="12px" />
                 </div>
             </div>
 

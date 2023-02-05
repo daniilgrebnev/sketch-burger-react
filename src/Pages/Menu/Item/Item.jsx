@@ -7,6 +7,7 @@ import { setItemInCart } from '../../../redux/cart/reducer.js'
 
 const Item = (burger) => {
     let [active, setActive] = useState(false)
+    let [infoHover, setInfoHover] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -16,6 +17,13 @@ const Item = (burger) => {
 
     const style = {
         background: burger.background,
+    }
+    const infoHoverHandler = () => {
+        setInfoHover(!infoHover)
+    }
+    const borderStyle = {
+        border: `2px solid ${burger.background}`,
+        color: burger.background,
     }
 
     return (
@@ -28,6 +36,20 @@ const Item = (burger) => {
 
             <div className="content">
                 <p>{burger.title}</p>
+                <div
+                    className="information"
+                    style={borderStyle}
+                    onMouseLeave={infoHoverHandler}
+                    onMouseEnter={infoHoverHandler}
+                >
+                    i
+                </div>
+                <div className={infoHover ? 'info-text active' : 'info-text'}>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Aspernatur, sit nesciunt suscipit nulla delectus nisi
+                    ratione, quia earum fuga, quis fugiat. Error corrupti
+                    laudantium ex cumque distinctio, mollitia libero officiis?
+                </div>
 
                 <button>
                     <span className="cost">

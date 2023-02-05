@@ -32,7 +32,11 @@ const BurgersMenuPage = () => {
                         </div>
                     ) : (
                         burgers.map((burger) => (
-                            <Item key={burger.id} {...burger}/>
+                            <Item
+                                key={burger.id}
+                                {...burger}
+                                background="#fc832e"
+                            />
                         ))
                     )}
                 </div>

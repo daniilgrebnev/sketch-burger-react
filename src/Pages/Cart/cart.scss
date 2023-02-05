@@ -6,19 +6,25 @@
     position: relative;
     margin-top: 150px;
     .cards {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin: 0 auto;
     }
+
     h1 {
         margin: 50px auto 100px auto;
         font-size: 40px;
         text-align: center;
     }
     .cart-product-card {
-        margin: 0 auto;
-        padding: 8px 0;
-        display: grid;
-        grid-template-columns: 20% 10% 50% 15% 5%;
+        margin: 20px auto;
+        box-shadow: 10px 10px 30px #000000;
+        border-radius: 15px;
+        height: 350px;
+        position: relative;
         align-items: center;
         width: 80%;
+        padding: 20px;
         border-bottom: 1px solid #737272;
         overflow: hidden;
         position: relative;
@@ -33,11 +39,15 @@
         }
 
         .counter {
+            position: absolute;
+            bottom: 0;
+            left: 40%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             user-select: none;
             font-size: 20px;
+            margin: 30px 0;
 
             .plus {
                 color: #2a942a;
@@ -48,12 +58,13 @@
             b {
                 font-size: 25px;
                 font-weight: bold;
+                margin: 0 10px;
             }
             .plus,
             .minus {
                 cursor: pointer;
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
                 text-align: center;
                 display: flex;
                 align-items: center;
@@ -68,15 +79,18 @@
         .title {
             font-size: 25px;
             font-weight: bold;
-            margin: 0 50px;
             text-align: center;
+            margin-top: 50px;
         }
 
         .cost {
-            font-size: 18px;
-
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 10px;
             span {
                 font-weight: bold;
+                font-size: 24px;
             }
         }
         .remove {
@@ -88,7 +102,9 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-
+            position: absolute;
+            right: 0;
+            bottom: 0;
             font-size: 30px;
             font-weight: bold;
         }
@@ -98,9 +114,9 @@
         min-width: 150px;
         margin: 20px auto;
         font-size: 20px;
-        position: fixed;
-        right: 20px;
-        top: 80%;
+        position: absolute;
+        left: 20px;
+        top: 0;
         padding: 20px 50px;
         background: #484848;
         border-radius: 20px;
@@ -108,12 +124,9 @@
     }
     .checkout {
         text-align: center;
-        margin: 20px auto;
+        margin: 50px auto;
         font-size: 20px;
-        position: fixed;
-        right: 20px;
-        top: 90%;
-        width: 150px;
+        width: 50%;
         padding: 20px 50px;
         background: #484848;
         border-radius: 20px;
